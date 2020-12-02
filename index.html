@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="start-wrap">
+    <h1 class="main-text">Выберите уровень сложности:</h1>
+    <h2 class="subtitle">Выберите сложность и игра начнется. Чем выше уровень - тем больше будет выборка карт. </h2>
+    <div class="menu-wrapper">
+      <div class="menu">
+        <ul class="options">
+          <li class="easy-option option" data-name="easy">Простой</li>
+          <li class="medium-option option" data-name="medium">Средний</li>
+          <li class="hard-option option" data-name="hard">Сложный</li>
+        </ul>
+        <button class="start-button" id="start-button">Начать игру</button>
+      </div>
+      <div class="cards">
+        <img class="card-one" src="./img/Card-back.png" alt="обратная сторона карты">
+        <img class="card-two" src="./img/Card-back.png" alt="обратная сторона карты">
+      </div>
+    </div>
+  </div>
+  <div class="game-wrap">
+    <div class="easy-option__cards">
+      <img class="card" src="./img/Card-back.png" alt="обратная сторона карты">
+      <img class="card" src="./img/Card-back.png" alt="обратная сторона карты">
+      <img class="card" src="./img/Card-back.png" alt="обратная сторона карты">
+    </div>
+    <div class="medium-option__cards">
+      <div>
+        <img class="card" src="./img/Card-back.png" alt="обратная сторона карты">
+        <img class="card" src="./img/Card-back.png" alt="обратная сторона карты">
+        <img class="card" src="./img/Card-back.png" alt="обратная сторона карты">
+      </div>
+      <div>
+        <img class="card" src="./img/Card-back.png" alt="обратная сторона карты">
+        <img class="card" src="./img/Card-back.png" alt="обратная сторона карты">
+        <img class="card" src="./img/Card-back.png" alt="обратная сторона карты">
+      </div>
+    </div>
+    <div class="hard-option__cards">
+      <div>
+        <img class="card" src="./img/Card-back.png" alt="обратная сторона карты">
+        <img class="card" src="./img/Card-back.png" alt="обратная сторона карты">
+        <img class="card" src="./img/Card-back.png" alt="обратная сторона карты">
+        <img class="card" src="./img/Card-back.png" alt="обратная сторона карты">
+        <img class="card" src="./img/Card-back.png" alt="обратная сторона карты">
+      </div>
+      <div>
+        <img class="card" src="./img/Card-back.png" alt="обратная сторона карты">
+        <img class="card" src="./img/Card-back.png" alt="обратная сторона карты">
+        <img class="card" src="./img/Card-back.png" alt="обратная сторона карты">
+        <img class="card" src="./img/Card-back.png" alt="обратная сторона карты">
+        <img class="card" src="./img/Card-back.png" alt="обратная сторона карты">
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
