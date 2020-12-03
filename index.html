@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Игра - найди баг!</title>
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet">
@@ -15,9 +15,9 @@
     <div class="menu-wrapper">
       <div class="menu">
         <ul class="options">
-          <li class="easy-option option" data-name="easy">Простой</li>
-          <li class="medium-option option" data-name="medium">Средний</li>
-          <li class="hard-option option" data-name="hard">Сложный</li>
+          <li class="easy-option option active" data-name="легкий">Простой</li>
+          <li class="medium-option option" data-name="средний">Средний</li>
+          <li class="hard-option option" data-name="тяжелый">Сложный</li>
         </ul>
         <button class="start-button" id="start-button">Начать игру</button>
       </div>
@@ -29,9 +29,21 @@
   </div>
   <div class="game-wrap">
     <div class="easy-option__cards">
-      <img class="card" src="./img/Card-back.png" alt="обратная сторона карты">
-      <img class="card" src="./img/Card-back.png" alt="обратная сторона карты">
-      <img class="card" src="./img/Card-back.png" alt="обратная сторона карты">
+      <div class="card">
+        <img class="back-card" src="./img/Card-back.png" alt="обратная сторона карты">
+        <img class="gameover-card" src="./img/Card-gameover.png" alt="Игра окончена!">
+        <img class="bug-card" src="./img/Card-bug.png" alt="Баг">
+      </div>
+      <div class="card">
+        <img class="back-card" src="./img/Card-back.png" alt="обратная сторона карты">
+        <img class="gameover-card" src="./img/Card-gameover.png" alt="Игра окончена!">
+        <img class="bug-card" src="./img/Card-bug.png" alt="Баг">
+      </div>
+      <div class="card">
+        <img class="back-card" src="./img/Card-back.png" alt="обратная сторона карты">
+        <img class="gameover-card" src="./img/Card-gameover.png" alt="Игра окончена!">
+        <img class="bug-card" src="./img/Card-bug.png" alt="Баг">
+      </div>
     </div>
     <div class="medium-option__cards">
       <div>
