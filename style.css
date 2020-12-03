@@ -131,20 +131,13 @@ li:hover::before {
   height: 100vh;
 }
 
-.easy-option__cards, .medium-option__cards {
-  display: none;
+.table_cards {
+  display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   margin: 0 auto;
   width: 1528px;
-}
-
-.hard-option__cards {
-  display: none;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin: 0 auto;
 }
 
 .card {

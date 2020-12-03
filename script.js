@@ -17,32 +17,41 @@ function optionSelect() {
   }
 
 const startBtn = document.getElementById('start-button');
-const easyGame = document.querySelector('.easy-option__cards');
-const mediumGame = document.querySelector('.medium-option__cards');
-const hardGame = document.querySelector('.hard-option__cards');
-
+const tableCards = document.querySelector('.table_cards');
 const menu = document.querySelector('.start-wrap');
 
 startBtn.addEventListener('click', function() {
   console.log(`Начали игру. ${select.dataset.name} уровень`);
   
   if(select.dataset.name === 'легкий'){
-    easyGame.style.display = "flex";
+    createCard(3);
     menu.style.display = "none";
     } else if(select.dataset.name === 'средний'){
-    mediumGame.style.display = "flex";
+    createCard(6);
     menu.style.display = "none";
     } else {
-    hardGame.style.display = "flex";
+    createCard(10);
     menu.style.display = "none";
   }
 }
 );
+//---------------------------------------Создание карт-----------------------------
+function createCard(el) {
+  for (let i=0; i < el; i++){
+    const card = document.createElement('div');
+    card.classList.add('card');
+    card.innerHTML = `
+    <div class="back-card"></div>
+    <div class="gameover-card"></div>
+    `;
+    tableCards.appendChild(card);
+  }
+}
 // --------------------------------------Переворачивание карты --------------------
 
-let card = document.getElementsByClassName('card');
+let cardSelected = document.getElementsByClassName('card');
 
-for(let el of card){
+for(let el of cardSelected){
   el.addEventListener('click',  cardClick);
 }
 
@@ -55,3 +64,4 @@ function returnToMenu(){
   this.parentNode.style.display = "none";
   menu.style.display = "block";
 }
+//-------------------------------------------
