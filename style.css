@@ -131,52 +131,10 @@ li:hover::before {
   height: 100vh;
 }
 
-.card {
-  transition: transform 300ms ease-in-out;
-  position: relative;
-  height: 1000px;
-  perspective: 1000px;
-  transform-style: preserve-3d;
-  cursor: pointer;
-  }
-
-.gameover-card, .bug-card {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  transform: rotateY(180deg);
-}
-
-.back-card {
-  position: absolute;
-  transform: rotateY(180deg);
-  backface-visibility: visible;
-  height: 1000px;
-}
-
-.flip {
-  transform: rotateY(180deg);
-  backface-visibility: visible;
-}
-
-.invisible {
-  backface-visibility: hidden;
-}
-
-.card.flip:hover {
-  transform: none;
-  filter: none;
-}
-
-.card:hover {
-  transform: rotate(-3deg) translateY(-10%);
-  filter: drop-shadow(14px 14px 22px rgba(0,0,0,0.7));
-}
-
 .easy-option__cards, .medium-option__cards {
   display: none;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
   margin: 0 auto;
   width: 1528px;
@@ -187,6 +145,45 @@ li:hover::before {
   justify-content: space-between;
   flex-wrap: wrap;
   margin: 0 auto;
+}
+
+.card {
+  position: relative;
+  width: 484px;
+  height: 757px;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  }
+
+.gameover-card {
+  background-image: url(./img/Card-gameover.png);
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  transition: transform 300ms ease-in-out;
+}
+
+.back-card {
+  transition: transform 300ms ease-in-out;
+  background-image: url(./img/Card-back.png);
+  background-size: cover;
+  position: absolute;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.flip {
+  transform: rotateY(180deg);
+  transition: transform 300ms ease-in-out;
+}
+
+.back-card:hover {
+  transform: rotate(-3deg) translateY(-10%);
+  filter: drop-shadow(14px 14px 22px rgba(0,0,0,0.7));
 }
 
 /* Адаптив */
