@@ -8,11 +8,11 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   font-family: 'Roboto', sans-serif;
-  min-height: 100vh;
+  max-height: 100vh;
+  color: white;
 }
 
 .start-wrap {
-  color: white;
   padding-top: 262px;
   padding-left: 212px;
 }
@@ -42,7 +42,6 @@ h2 {
 .menu-wrapper {
   display: flex;
   flex-direction: row;
-  height: 100vh;
 }
 
 .options {
@@ -61,8 +60,8 @@ ul {
   cursor: pointer;
 }
 
-.option:hover, .option.active {
-  color: #d62b2e;
+.option:hover {
+  opacity: 0.7;
 }
 
 li::before, .option.active::before {
@@ -105,8 +104,9 @@ li:hover::before {
 .cards {
   align-self: center;
   flex: 1;
-  margin-bottom: 160px;
   margin-right: 10px;
+  top: 245px;
+  position: relative;
 }
 
 .card-one {
@@ -156,11 +156,11 @@ li:hover::before {
   height: 100%;
   backface-visibility: hidden;
   transform: rotateY(180deg);
-  transition: transform 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
 
 .back-card {
-  transition: transform 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
   background-image: url(./img/Card-back.png);
   background-size: cover;
   position: absolute;
@@ -171,7 +171,7 @@ li:hover::before {
 
 .flip {
   transform: rotateY(180deg);
-  transition: transform 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
 
 .back-card:hover {
@@ -180,8 +180,8 @@ li:hover::before {
 }
 
 /* Адаптив */
-/*
-@media (max-width: 3715px) {
+
+/* @media (max-width: 3715px) {
   .card {
     width: 510px;
   }
@@ -191,7 +191,7 @@ li:hover::before {
   .card {
     width: 440px;
   }
-}
+} */
 
 @media (max-width: 2770px) {
   .start-wrap {
@@ -209,10 +209,6 @@ li:hover::before {
     font-size: 36px;
     margin-bottom: 117px;
     letter-spacing: .2px;
-  }
-
-  .menu-wrapper {
-    height: 70vh;
   }
 
   .menu {
@@ -242,21 +238,21 @@ li:hover::before {
   }
 
   .cards {
-    margin-bottom: 155px;
     margin-right: 0;
+    top: 110px;
   }
 
   .card {
     width: 422px;
   }
 }
-
+/* 
 @media (max-width: 2571px) {
   .card {
     padding: 16px;
     width: 288px;
   }
-}
+} */
 
 @media (max-width: 1840px) {
   .start-wrap {
@@ -274,10 +270,6 @@ li:hover::before {
     font-size: 23px;
     margin-bottom: 74px;
     letter-spacing: .6px;
-  }
-
-  .menu-wrapper {
-    height: 70vh;
   }
 
   .menu {
@@ -310,7 +302,7 @@ li:hover::before {
   }
 
   .cards {
-    margin-bottom: 160px;
+    top: 80px;
   }
 
   .card-two {
@@ -374,7 +366,7 @@ li:hover::before {
   }
 
   .cards {
-    margin-bottom: 124px;
+    top: 62px;
   }
 
   .card-two {
@@ -388,12 +380,12 @@ li:hover::before {
   }
 }
 
-@media (max-width: 1062px) {
+/* @media (max-width: 1062px) {
   .card {
     padding: 7px;
     width: 145px;
   }
-}
+} */
 
 @media (max-width: 1024px) {
   .start-wrap {
@@ -445,7 +437,7 @@ li:hover::before {
   }
 
   .cards {
-    margin-bottom: 87px;
+    top: 45px;
   }
 
   .card-two {
@@ -507,7 +499,7 @@ li:hover::before {
   }
 
   .cards {
-    margin-bottom: 62px;
+    top: 35px;
   }
 
   .card-two {
@@ -568,7 +560,7 @@ li:hover::before {
   }
 
   .cards {
-    margin-bottom: 50px;
+    top: 27px;
   }
 
   .card-two {
@@ -649,11 +641,17 @@ li:hover::before {
   }
 
   .cards {
-    margin-bottom: 40px;
+    top: 20px;
+    left: 35px;
   }
 
   .card-one, .card-two {
     width: 33%;
+  }
+
+  .card-two {
+    right: 55px;
+    top: 5px;
   }
 
   .card {
@@ -662,6 +660,11 @@ li:hover::before {
 }
 
 @media (max-width: 375px) {
+  .start-wrap {
+    padding: 30px;
+    text-align: center;
+  }
+
   h1 {
     font-size: 20px;
     margin-bottom: 10px;
@@ -678,6 +681,7 @@ li:hover::before {
 
   .options {
     margin-bottom: 33px;
+    padding-left: 0;
   }
   
   .option {
@@ -694,6 +698,7 @@ li:hover::before {
     width: 145px;
     height: 40px;
     font-size: 14px;
+    align-self: center;
   }
 
   .cards {
