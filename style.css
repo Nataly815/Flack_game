@@ -8,7 +8,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   font-family: 'Roboto', sans-serif;
-  max-height: 100vh;
+  /* max-height: 100vh; */
   color: white;
 }
 
@@ -136,16 +136,16 @@ li:hover::before {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  margin: 0 auto;
-  width: 1528px;
+  width: 1750px;
 }
 
 .card {
   position: relative;
-  width: 484px;
-  height: 757px;
+  width: 452px;
+  height: 710px;
   transform-style: preserve-3d;
   cursor: pointer;
+  margin-bottom: 60px;
   }
 
 .gameover-card {
@@ -181,17 +181,16 @@ li:hover::before {
 
 /* Адаптив */
 
-/* @media (max-width: 3715px) {
+@media (max-width: 3660px) {
+  /* .table_cards {
+    width: 2550px;
+  } */
+
   .card {
-    width: 510px;
+    width: 441px;
+    height: 682px;
   }
 }
-
-@media (max-width: 3103px) {
-  .card {
-    width: 440px;
-  }
-} */
 
 @media (max-width: 2770px) {
   .start-wrap {
@@ -242,17 +241,36 @@ li:hover::before {
     top: 110px;
   }
 
-  .card {
+  /* .card {
     width: 422px;
+    height: 660px;
+    margin-bottom: 40px;
+  }
+
+  .game-wrap {
+    height: 79vh;
+  } */
+
+  /* .table_cards {
+    width: 2400px;
+  } */
+
+  .card {
+    width: 441px;
+    height: 682px;
   }
 }
-/* 
+
 @media (max-width: 2571px) {
-  .card {
-    padding: 16px;
-    width: 288px;
+  .table_cards {
+    width: 1140px;
   }
-} */
+
+  .card {
+    width: 290px;
+    height: 453px;
+  }
+}
 
 @media (max-width: 1840px) {
   .start-wrap {
@@ -311,9 +329,13 @@ li:hover::before {
     top: 24px;
   }
 
+  .table_cards {
+    width: 1146px;
+  }
+
   .card {
-    padding: 14px;
-    width: 205px;
+    width: 211px;
+    height: 335px;
   }
 }
 
@@ -374,9 +396,14 @@ li:hover::before {
     top: 17px;
   }
 
+  .table_cards {
+    width: 875px;
+  }
+
   .card {
-    padding: 10px;
-    width: 155px;
+    width: 161px;
+    height: 252px;
+    margin-bottom: 22px;
   }
 }
 
@@ -445,8 +472,14 @@ li:hover::before {
     top: 12px;
   }
 
+  .table_cards {
+    width: 630px;
+  }
+
   .card {
-    width: 110px;
+    width: 117px;
+    height: 182px;
+    margin-bottom: 9px;
   }
 }
 
@@ -507,9 +540,14 @@ li:hover::before {
     top: 10px;
   }
 
+  .table_cards {
+    width: 518px;
+  }
+
   .card {
-    padding: 2px;;
-    width: 85px;
+    width: 94px;
+    height: 147px;
+    margin-bottom: 8px;
   }
 }
 
@@ -568,9 +606,13 @@ li:hover::before {
     top: 8px;
   }
 
+  .table_cards {
+    width: 462px;
+  }
+
   .card {
-    padding: 2px;
-    width: 80px;
+    width: 85px;
+    height: 132px;
   }
 }
 
@@ -579,9 +621,13 @@ li:hover::before {
     margin-right: 0;
   }
 
+  .table_cards {
+    width: 386px;
+  }
+
   .card {
-    padding: 2px;
-    width: 75px;
+    width: 71px;
+    height: 110px;
   }
 }
 
@@ -590,9 +636,14 @@ li:hover::before {
     width: 36%;
   }
 
+  .table_cards {
+    width: 353px;
+  }
+
   .card {
-    padding: 2px;
-    width: 62px;
+    width: 66px;
+    height: 103px;
+    margin-bottom: 7px;
   }
 }
 
@@ -654,8 +705,14 @@ li:hover::before {
     top: 5px;
   }
 
+  .table_cards {
+    width: 303px;
+  }
+
   .card {
-    width: 55px;
+    width: 57px;
+    height: 89px;
+    margin-bottom: 7px;
   }
 }
 
@@ -705,8 +762,13 @@ li:hover::before {
     display: none;
   }
 
+  .table_cards {
+    width: 230px;
+  }
+
   .card {
-    padding: 1px;;
-    width: 50px;
+    width: 42px;
+    height: 66px;
+    margin-bottom: 7px;
   }
 }
