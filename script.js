@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 const optionCollection = document.querySelectorAll('.option');
 
@@ -20,9 +20,9 @@ for(let el of optionCollection){
   el.addEventListener('click', optionSelect);
 }
 
-function createCard(el) {
+function createCard(el, cards) {
   const tableCards = document.createElement('div');
-  tableCards.className = 'table_cards';
+  tableCards.className = `table_cards ${cards}`;
   for (let i=0; i < el; i++){
     const card = document.createElement('div');
     card.className = 'card';
@@ -38,15 +38,15 @@ function createCard(el) {
 function startGame() {
   console.log(`Начали игру. ${select.dataset.name} уровень`);
   if(select.dataset.name === 'легкий'){
-    createCard(3);
+    createCard(3, 'three-card');
     init();
     menu.style.display = "none";
     } else if(select.dataset.name === 'средний'){
-    createCard(6);
+    createCard(6, 'six-card');
     init();
     menu.style.display = "none";
     } else {
-    createCard(10);
+    createCard(10, 'ten-card');
     init();
     menu.style.display = "none";
   }

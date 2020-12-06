@@ -8,7 +8,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   font-family: 'Roboto', sans-serif;
-  /* max-height: 100vh; */
   color: white;
 }
 
@@ -64,7 +63,8 @@ ul {
   opacity: 0.7;
 }
 
-li::before, .option.active::before {
+li::before,
+.option.active::before {
   content: "";
   visibility: hidden;
   display: inline-block;
@@ -93,12 +93,12 @@ li:hover::before {
   color: white;
   cursor: pointer;
   border-radius: 15px;
-  box-shadow: 11px 7px 10px 0px rgba(0,0,0,0.12);
-  transition: all 200ms ease; 
+  box-shadow: 11px 7px 10px 0 rgba(0,0,0,0.12);
+  transition: all 200ms ease;
 }
 
 .start-button:hover {
-  background-color:  #df6d6f;
+  background-color: #df6d6f;
 }
 
 .cards {
@@ -125,18 +125,20 @@ li:hover::before {
 
 /* Игра */
 .game-wrap {
-  display: flex;
+  display: grid;
   justify-content: center;
-  align-items: center;
+  align-content: center;
   height: 100vh;
 }
 
 .table_cards {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 1750px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2vw;
+}
+
+.table_cards.ten-card {
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
 .card {
@@ -145,8 +147,7 @@ li:hover::before {
   height: 710px;
   transform-style: preserve-3d;
   cursor: pointer;
-  margin-bottom: 60px;
-  }
+}
 
 .gameover-card {
   background-image: url(./img/Card-gameover.png);
@@ -182,10 +183,6 @@ li:hover::before {
 /* Адаптив */
 
 @media (max-width: 3660px) {
-  /* .table_cards {
-    width: 2550px;
-  } */
-
   .card {
     width: 441px;
     height: 682px;
@@ -218,12 +215,13 @@ li:hover::before {
     margin-bottom: 169px;
     padding-left: 7px;
   }
-  
+
   .option {
     margin-bottom: 47px;
   }
 
-  li::before, .option.active::before {
+  li::before,
+  .option.active::before {
     margin-right: 53px;
     margin-bottom: 15px;
     width: 34px;
@@ -241,20 +239,6 @@ li:hover::before {
     top: 110px;
   }
 
-  /* .card {
-    width: 422px;
-    height: 660px;
-    margin-bottom: 40px;
-  }
-
-  .game-wrap {
-    height: 79vh;
-  } */
-
-  /* .table_cards {
-    width: 2400px;
-  } */
-
   .card {
     width: 441px;
     height: 682px;
@@ -262,10 +246,6 @@ li:hover::before {
 }
 
 @media (max-width: 2571px) {
-  .table_cards {
-    width: 1140px;
-  }
-
   .card {
     width: 290px;
     height: 453px;
@@ -305,7 +285,8 @@ li:hover::before {
     letter-spacing: 0;
   }
 
-  li::before, .option.active::before {
+  li::before,
+  .option.active::before {
     margin-right: 35px;
     margin-bottom: 10px;
     width: 23px;
@@ -327,10 +308,6 @@ li:hover::before {
     margin-left: 38px;
     right: 94px;
     top: 24px;
-  }
-
-  .table_cards {
-    width: 1146px;
   }
 
   .card {
@@ -373,7 +350,8 @@ li:hover::before {
     letter-spacing: 0;
   }
 
-  li::before, .option.active::before {
+  li::before,
+  .option.active::before {
     margin-right: 26px;
     margin-bottom: 9px;
     width: 18px;
@@ -396,23 +374,11 @@ li:hover::before {
     top: 17px;
   }
 
-  .table_cards {
-    width: 875px;
-  }
-
   .card {
     width: 161px;
     height: 252px;
-    margin-bottom: 22px;
   }
 }
-
-/* @media (max-width: 1062px) {
-  .card {
-    padding: 7px;
-    width: 145px;
-  }
-} */
 
 @media (max-width: 1024px) {
   .start-wrap {
@@ -448,7 +414,8 @@ li:hover::before {
     letter-spacing: -.3px;
   }
 
-  li::before, .option.active::before {
+  li::before,
+  .option.active::before {
     margin-right: 19px;
     margin-bottom: 6px;
     width: 13px;
@@ -472,14 +439,9 @@ li:hover::before {
     top: 12px;
   }
 
-  .table_cards {
-    width: 630px;
-  }
-
   .card {
     width: 117px;
     height: 182px;
-    margin-bottom: 9px;
   }
 }
 
@@ -516,7 +478,8 @@ li:hover::before {
     letter-spacing: 0;
   }
 
-  li::before, .option.active::before {
+  li::before,
+  .option.active::before {
     margin-right: 13px;
     margin-bottom: 5px;
     width: 10px;
@@ -540,14 +503,9 @@ li:hover::before {
     top: 10px;
   }
 
-  .table_cards {
-    width: 518px;
-  }
-
   .card {
     width: 94px;
     height: 147px;
-    margin-bottom: 8px;
   }
 }
 
@@ -583,7 +541,8 @@ li:hover::before {
     margin-bottom: 9px;
   }
 
-  li::before, .option.active::before {
+  li::before,
+  .option.active::before {
     margin-right: 11px;
     margin-bottom: 3px;
     width: 7px;
@@ -606,10 +565,6 @@ li:hover::before {
     top: 8px;
   }
 
-  .table_cards {
-    width: 462px;
-  }
-
   .card {
     width: 85px;
     height: 132px;
@@ -621,10 +576,6 @@ li:hover::before {
     margin-right: 0;
   }
 
-  .table_cards {
-    width: 386px;
-  }
-
   .card {
     width: 71px;
     height: 110px;
@@ -632,18 +583,14 @@ li:hover::before {
 }
 
 @media (max-width: 465px) {
-  .card-one, .card-two {
+  .card-one,
+  .card-two {
     width: 36%;
-  }
-
-  .table_cards {
-    width: 353px;
   }
 
   .card {
     width: 66px;
     height: 103px;
-    margin-bottom: 7px;
   }
 }
 
@@ -678,7 +625,8 @@ li:hover::before {
     letter-spacing: .4px;
   }
 
-  li::before, .option.active::before {
+  li::before,
+  .option.active::before {
     margin-right: 8px;
     margin-bottom: 2px;
     width: 5px;
@@ -696,7 +644,8 @@ li:hover::before {
     left: 35px;
   }
 
-  .card-one, .card-two {
+  .card-one,
+  .card-two {
     width: 33%;
   }
 
@@ -705,14 +654,9 @@ li:hover::before {
     top: 5px;
   }
 
-  .table_cards {
-    width: 303px;
-  }
-
   .card {
     width: 57px;
     height: 89px;
-    margin-bottom: 7px;
   }
 }
 
@@ -745,7 +689,8 @@ li:hover::before {
     margin-bottom: 15px;
   }
 
-  li::before, .option.active::before {
+  li::before,
+  .option.active::before {
     margin-right: 14px;
     width: 8px;
     height: 8px;
@@ -762,13 +707,8 @@ li:hover::before {
     display: none;
   }
 
-  .table_cards {
-    width: 230px;
-  }
-
   .card {
     width: 42px;
     height: 66px;
-    margin-bottom: 7px;
   }
 }
