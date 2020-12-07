@@ -1,0 +1,714 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(./img/Background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+}
+
+.start-wrap {
+  padding-top: 262px;
+  padding-left: 212px;
+}
+
+h1 {
+  font-size: 117px;
+  margin-bottom: 15px;
+}
+
+h2 {
+  font-size: 38px;
+  margin-bottom: 122px;
+  padding-left: 4px;
+  font-weight: normal;
+  letter-spacing: 0.4px;
+}
+
+.menu {
+  font-size: 101px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-right: 17%;
+}
+
+.menu-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.options {
+  padding-left: 7px;
+  margin-bottom: 184px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.option {
+  margin-bottom: 49px;
+  letter-spacing: 1px;
+  transition: all 200ms ease;
+  cursor: pointer;
+}
+
+.option:hover {
+  opacity: 0.7;
+}
+
+li::before,
+.option.active::before {
+  content: "";
+  visibility: hidden;
+  display: inline-block;
+  margin-right: 57px;
+  margin-bottom: 16px;
+  width: 36px;
+  height: 36px;
+  background-color: #d62b2e;
+  transform: rotate(45deg);
+}
+
+li:hover::before {
+  visibility: visible;
+}
+
+.option.active::before {
+  visibility: visible;
+}
+
+.start-button {
+  width: 720px;
+  height: 195px;
+  font-size: 63px;
+  font-weight: bold;
+  background-color: #d62b2e;
+  color: white;
+  cursor: pointer;
+  border-radius: 15px;
+  box-shadow: 11px 7px 10px 0 rgba(0, 0, 0, 0.12);
+  transition: all 200ms ease;
+}
+
+.start-button:hover {
+  background-color: #df6d6f;
+}
+
+.cards {
+  align-self: center;
+  flex: 1;
+  margin-right: 10px;
+  top: 245px;
+  position: relative;
+}
+
+.card-one {
+  width: 40%;
+  transform: rotate(12deg);
+}
+
+.card-two {
+  position: relative;
+  right: 107px;
+  top: 38px;
+  width: 40%;
+  transform: rotate(39deg);
+  margin-left: 20px;
+}
+
+/* Игра */
+.game-wrap {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  height: 100vh;
+}
+
+.table_cards {
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  grid-gap: 2vw;
+}
+
+.table_cards.ten-card {
+  grid-template-columns: repeat(5, 17%);
+}
+
+.card {
+  position: relative;
+  width: 452px;
+  height: 710px;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.gameover-card {
+  background-image: url(./img/Card-gameover.png);
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  transition: all 300ms ease-in-out;
+}
+
+.back-card {
+  transition: all 300ms ease-in-out;
+  background-image: url(./img/Card-back.png);
+  background-size: cover;
+  position: absolute;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.flip {
+  transform: rotateY(180deg);
+  transition: all 300ms ease-in-out;
+}
+
+.back-card:hover {
+  transform: rotate(-3deg) translateY(-10%);
+  filter: drop-shadow(14px 14px 22px rgba(0, 0, 0, 0.7));
+}
+
+/* Адаптив */
+
+@media (max-width: 3660px) {
+  .card {
+    width: 441px;
+    height: 682px;
+  }
+}
+
+@media (max-width: 2770px) {
+  .start-wrap {
+    padding-top: 246px;
+    padding-left: 198px;
+  }
+
+  h1 {
+    font-size: 110px;
+    margin-bottom: 13px;
+    letter-spacing: -0.2px;
+  }
+
+  h2 {
+    font-size: 36px;
+    margin-bottom: 117px;
+    letter-spacing: 0.2px;
+  }
+
+  .menu {
+    font-size: 94px;
+  }
+
+  .options {
+    margin-bottom: 169px;
+    padding-left: 7px;
+  }
+
+  .option {
+    margin-bottom: 47px;
+  }
+
+  li::before,
+  .option.active::before {
+    margin-right: 53px;
+    margin-bottom: 15px;
+    width: 34px;
+    height: 34px;
+  }
+
+  .start-button {
+    width: 677px;
+    height: 182px;
+    font-size: 58px;
+  }
+
+  .cards {
+    margin-right: 0;
+    top: 110px;
+  }
+
+  .card {
+    width: 441px;
+    height: 682px;
+  }
+}
+
+@media (max-width: 2571px) {
+  .card {
+    width: 290px;
+    height: 453px;
+  }
+}
+
+@media (max-width: 1840px) {
+  .start-wrap {
+    padding-top: 162px;
+    padding-left: 131px;
+  }
+
+  h1 {
+    font-size: 73px;
+    margin-bottom: 13px;
+    letter-spacing: -0.2px;
+  }
+
+  h2 {
+    font-size: 23px;
+    margin-bottom: 74px;
+    letter-spacing: 0.6px;
+  }
+
+  .menu {
+    font-size: 64px;
+    margin-right: 296px;
+  }
+
+  .options {
+    margin-bottom: 115px;
+    padding-left: 5px;
+  }
+
+  .option {
+    margin-bottom: 29px;
+    letter-spacing: 0;
+  }
+
+  li::before,
+  .option.active::before {
+    margin-right: 35px;
+    margin-bottom: 10px;
+    width: 23px;
+    height: 23px;
+  }
+
+  .start-button {
+    width: 452px;
+    height: 125px;
+    font-size: 40px;
+    letter-spacing: -0.5px;
+  }
+
+  .cards {
+    top: 80px;
+  }
+
+  .card-two {
+    margin-left: 38px;
+    right: 94px;
+    top: 24px;
+  }
+
+  .card {
+    width: 211px;
+    height: 335px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .start-wrap {
+    padding-top: 127px;
+    padding-left: 103px;
+  }
+
+  h1 {
+    font-size: 57px;
+    margin-bottom: 9px;
+    letter-spacing: 0;
+  }
+
+  h2 {
+    font-size: 18px;
+    margin-bottom: 60px;
+    padding-left: 3px;
+    letter-spacing: 0.5px;
+  }
+
+  .menu {
+    font-size: 50px;
+    margin-right: 234px;
+  }
+
+  .options {
+    margin-bottom: 88px;
+    padding-left: 5px;
+  }
+
+  .option {
+    margin-bottom: 22px;
+    letter-spacing: 0;
+  }
+
+  li::before,
+  .option.active::before {
+    margin-right: 26px;
+    margin-bottom: 9px;
+    width: 18px;
+    height: 18px;
+  }
+
+  .start-button {
+    width: 354px;
+    height: 98px;
+    font-size: 32px;
+    letter-spacing: -0.7px;
+  }
+
+  .cards {
+    top: 62px;
+  }
+
+  .card-two {
+    right: 82px;
+    top: 17px;
+  }
+
+  .card {
+    width: 161px;
+    height: 252px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .start-wrap {
+    padding-top: 91px;
+    padding-left: 73px;
+  }
+
+  h1 {
+    font-size: 40px;
+    margin-bottom: 8px;
+    letter-spacing: 0.3px;
+  }
+
+  h2 {
+    font-size: 12px;
+    margin-bottom: 42px;
+    padding-left: 2px;
+    letter-spacing: 0.8px;
+  }
+
+  .menu {
+    font-size: 36px;
+    margin-right: 166px;
+  }
+
+  .options {
+    margin-bottom: 63px;
+    padding-left: 3px;
+  }
+
+  .option {
+    margin-bottom: 16px;
+    letter-spacing: -0.3px;
+  }
+
+  li::before,
+  .option.active::before {
+    margin-right: 19px;
+    margin-bottom: 6px;
+    width: 13px;
+    height: 13px;
+  }
+
+  .start-button {
+    width: 251px;
+    height: 69px;
+    font-size: 23px;
+    letter-spacing: -0.6px;
+    border-radius: 6px;
+  }
+
+  .cards {
+    top: 45px;
+  }
+
+  .card-two {
+    right: 70px;
+    top: 12px;
+  }
+
+  .card {
+    width: 117px;
+    height: 182px;
+  }
+}
+
+@media (max-width: 768px) {
+  .start-wrap {
+    padding-top: 68px;
+    padding-left: 55px;
+  }
+
+  h1 {
+    font-size: 30px;
+    margin-bottom: 5px;
+    letter-spacing: 0.2px;
+  }
+
+  h2 {
+    font-size: 8px;
+    margin-bottom: 32px;
+    letter-spacing: 1.08px;
+  }
+
+  .menu {
+    font-size: 27px;
+    margin-right: 124px;
+  }
+
+  .options {
+    margin-bottom: 48px;
+    padding-left: 2px;
+  }
+
+  .option {
+    margin-bottom: 11px;
+    letter-spacing: 0;
+  }
+
+  li::before,
+  .option.active::before {
+    margin-right: 13px;
+    margin-bottom: 5px;
+    width: 10px;
+    height: 10px;
+  }
+
+  .start-button {
+    width: 188px;
+    height: 52px;
+    font-size: 16px;
+    letter-spacing: 0.2px;
+    border-radius: 5px;
+  }
+
+  .cards {
+    top: 35px;
+  }
+
+  .card-two {
+    right: 63px;
+    top: 10px;
+  }
+
+  .card {
+    width: 94px;
+    height: 147px;
+  }
+}
+
+@media (max-width: 600px) {
+  .start-wrap {
+    padding-top: 54px;
+    padding-left: 43px;
+  }
+
+  h1 {
+    font-size: 23px;
+    margin-bottom: 5px;
+    letter-spacing: 0.4px;
+  }
+
+  h2 {
+    font-size: 6px;
+    margin-bottom: 24px;
+    letter-spacing: 0.97px;
+  }
+
+  .menu {
+    font-size: 21px;
+    margin-right: 96px;
+  }
+
+  .options {
+    margin-bottom: 38px;
+    padding-left: 2px;
+  }
+
+  .option {
+    margin-bottom: 9px;
+  }
+
+  li::before,
+  .option.active::before {
+    margin-right: 11px;
+    margin-bottom: 3px;
+    width: 7px;
+    height: 8px;
+  }
+
+  .start-button {
+    width: 148px;
+    height: 43px;
+    font-size: 13px;
+    letter-spacing: 0;
+  }
+
+  .cards {
+    top: 27px;
+  }
+
+  .card-two {
+    right: 59px;
+    top: 8px;
+  }
+
+  .card {
+    width: 85px;
+    height: 132px;
+  }
+}
+
+@media (max-width: 560px) {
+  .menu {
+    margin-right: 0;
+  }
+
+  .card {
+    width: 71px;
+    height: 110px;
+  }
+}
+
+@media (max-width: 465px) {
+  .card-one,
+  .card-two {
+    width: 36%;
+  }
+
+  .card {
+    width: 66px;
+    height: 103px;
+  }
+}
+
+@media (max-width: 425px) {
+  .start-wrap {
+    padding-top: 38px;
+    padding-left: 30px;
+  }
+
+  h1 {
+    font-size: 16px;
+    margin-bottom: 4px;
+    letter-spacing: 0.5px;
+  }
+
+  h2 {
+    font-size: 5px;
+    margin-bottom: 17px;
+    letter-spacing: 0.3px;
+  }
+
+  .menu {
+    font-size: 14px;
+  }
+
+  .options {
+    margin-bottom: 24px;
+  }
+
+  .option {
+    margin-bottom: 8px;
+    letter-spacing: 0.4px;
+  }
+
+  li::before,
+  .option.active::before {
+    margin-right: 8px;
+    margin-bottom: 2px;
+    width: 5px;
+    height: 5px;
+  }
+
+  .start-button {
+    width: 105px;
+    height: 30px;
+    font-size: 9px;
+  }
+
+  .cards {
+    top: 20px;
+    left: 35px;
+  }
+
+  .card-one,
+  .card-two {
+    width: 33%;
+  }
+
+  .card-two {
+    right: 55px;
+    top: 5px;
+  }
+
+  .card {
+    width: 57px;
+    height: 89px;
+  }
+}
+
+@media (max-width: 375px) {
+  .start-wrap {
+    padding: 30px;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-size: 11px;
+    margin-bottom: 33px;
+  }
+
+  .menu {
+    font-size: 18px;
+  }
+
+  .options {
+    margin-bottom: 33px;
+    padding-left: 0;
+  }
+
+  .option {
+    margin-bottom: 15px;
+  }
+
+  li::before,
+  .option.active::before {
+    margin-right: 14px;
+    width: 8px;
+    height: 8px;
+  }
+
+  .start-button {
+    width: 145px;
+    height: 40px;
+    font-size: 14px;
+    align-self: center;
+  }
+
+  .cards {
+    display: none;
+  }
+
+  .card {
+    width: 42px;
+    height: 66px;
+  }
+}
