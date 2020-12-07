@@ -44,7 +44,7 @@ function returnToMenu(){
 function cardClick(){
   let cards = document.querySelectorAll(".card");
   this.classList.add("flip");
-  cards.forEach(item => item.addEventListener("click", returnToMenu));
+  cards.forEach((item) => item.addEventListener("click", returnToMenu));
 }
 
 function init(){
@@ -56,7 +56,7 @@ function init(){
   }
   getRandomBug(cards.length);
 
-    cards.forEach(item => item.addEventListener("click", cardClick));
+    cards.forEach((item) => item.addEventListener("click", cardClick));
 }
 
 function startGame() {

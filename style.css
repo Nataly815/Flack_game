@@ -93,7 +93,7 @@ li:hover::before {
   color: white;
   cursor: pointer;
   border-radius: 15px;
-  box-shadow: 11px 7px 10px 0 rgba(0,0,0,0.12);
+  box-shadow: 11px 7px 10px 0 rgba(0, 0, 0, 0.12);
   transition: all 200ms ease;
 }
 
@@ -198,7 +198,7 @@ li:hover::before {
   h1 {
     font-size: 110px;
     margin-bottom: 13px;
-    letter-spacing: -.2px;
+    letter-spacing: -0.2px;
   }
 
   h2 {
@@ -261,7 +261,7 @@ li:hover::before {
   h1 {
     font-size: 73px;
     margin-bottom: 13px;
-    letter-spacing: -.2px;
+    letter-spacing: -0.2px;
   }
 
   h2 {
@@ -297,7 +297,7 @@ li:hover::before {
     width: 452px;
     height: 125px;
     font-size: 40px;
-    letter-spacing: -.5px;
+    letter-spacing: -0.5px;
   }
 
   .cards {
@@ -362,7 +362,7 @@ li:hover::before {
     width: 354px;
     height: 98px;
     font-size: 32px;
-    letter-spacing: -.7px;
+    letter-spacing: -0.7px;
   }
 
   .cards {
@@ -411,7 +411,7 @@ li:hover::before {
   
   .option {
     margin-bottom: 16px;
-    letter-spacing: -.3px;
+    letter-spacing: -0.3px;
   }
 
   li::before,
@@ -426,7 +426,7 @@ li:hover::before {
     width: 251px;
     height: 69px;
     font-size: 23px;
-    letter-spacing: -.6px;
+    letter-spacing: -0.6px;
     border-radius: 6px;
   }
 
